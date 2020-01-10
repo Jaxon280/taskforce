@@ -8,6 +8,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import firebase from 'firebase';
 
 Vue.config.productionTip = false
+// setting
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFs2TdHobxX0HzOqd5cd9_LaoyRTbg-8k",
