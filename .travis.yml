@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+deploy:
+  provider: npm
+  email: keresu0720@gmail.com
+  on:
+    tags: true
+  api_key:
+    secure: WJMhWWfqXHq1MdQJLGNoTt0flbfM8S/hJjVIUCGm4h2oTuoc9fKpeQbrvnok5HIFRzIC4wz2v7srdeVZutwHSdB175VRzd0Yy7KO8rZ+AAzYW6+RIPbzRIl5KW7C1CoNn6DkU4qcA1BYmjJibDqk67FlET5nt46b8ytSocYkt0ZvKibU9Mj7j3bxJBmv4Vf/Opw2bXjXiC3v3B8Yt7KBsoqzkI35q5SWwmnTRVIsaofeILhFfNrwAQb1Ec77O6fT68YCPIahh70f5+rMJc/0hzVg+Zyxngl9Rrcov9XwaakB0HP8y3p7jS2mEbulWAwxKH+eRPzPBNhirFDSILtklEddkm1BTwd099PIdM7hhh0WHT1ygy20MM7II/LYB8n8ZeOYZ+yrammxLhlzsM4QAA6U2sg0L9omscQU+u2YIhP//zfRUfqmZLz4wsC4uumgkkB+NxP8ViRyY5py8DrTxdhMh96Gj86zTF2H5EeCot7kknzNZiklggT185cO8sw+nLDxV8hWQ+twaB9wL5yiGykiBdQZyyN8jM/PgWB1f3rF5+JJR8ufNYp9LaSfkJwOEyoYB0svGGvRDIWcDgKUVcvIb2zlO8wS3aJ3m6ummV0EoVTNrzrsPKLVUNelu3mfrhVzsJchrrC42hrp2DD7kuNl/bf0SdAP0Uf28/cOekc=
