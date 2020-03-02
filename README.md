@@ -1,6 +1,6 @@
 # barbarossa
 
-test2
+master test2
 
 ## Project setup
 ```
