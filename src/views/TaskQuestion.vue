@@ -4,10 +4,11 @@
       <v-card-title>{{ task.name }} を分類する</v-card-title>
       <v-text-field v-model="task.description" label="タスクについて追加のメモ（20字以内）"></v-text-field>
       <template>
-        <question :question-answer='question_answer' :object-key='"importance"'>
+        <question :question-answer='question_answer' :object-key='"importance"' @change="question_answer = $event">
           <div slot="question_content">そのタスクは重要ですか？</div>
         </question>
       </template>
+      <!--
 
       <template v-if="question_answer.importance === 'true'">
         <question :question-answer='question_answer' :object-key='"one_action"'>
@@ -52,8 +53,8 @@
           
         </template>
       </template>
-
-      <!--
+      -->
+      
       <template>
         <question v-if="question_answer.importance === 'true'" :question-answer='question_answer' :object-key='"one_action"'>
           <div slot="question_content">1アクションで終わりますか？</div>
@@ -72,14 +73,13 @@
           <v-btn color="info" @click='submit'>保存</v-btn>
         </div> 
       </template>
-      <div v-else-if="question_answer.importance === 'false' && question_answer.">
+      <div v-else-if="question_answer.importance === 'false'">
         <v-btn @click="$router.push({ name: 'taskbox' })">キャンセル</v-btn>
         <v-btn color="info" @click='submit'>保存</v-btn>
       </div>
 
       <template v-if="importance === 'yes' && one_action === 'no'">
         <div v-if="instant === 'yes'">
-          hoge
         </div>
         <v-radio-group v-else-if="instant === 'no'" v-model="postpone">
           <div>
@@ -129,19 +129,19 @@
         <v-btn @click="$router.push({ name: 'taskbox' })">キャンセル</v-btn>
         <v-btn color="info" @click='submit'>保存</v-btn>
       </div>
-      -->
+      
     </v-card>
   </v-container>
 </template>
 
 <script>
 import Question from '@/components/Question';
-import Submit from '@/components/Submit';
+// import Submit from '@/components/Submit';
 
 export default {
   components: {
     'question': Question,
-    'submit': Submit
+    // 'submit': Submit
   },
   created() {
     const task = this.$store.getters.getTaskById(this.$route.params.task_id)

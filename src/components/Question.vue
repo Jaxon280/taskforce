@@ -1,5 +1,5 @@
 <template>
-  <v-radio-group @input="updateQuestionAnswer($event.target.value)">
+  <v-radio-group :value="question_answer[this.object_key]" @input="updateQuestionAnswer($event.target.value)">
     <div>
       <slot name="question_content">Title</slot>
     </div>
@@ -31,7 +31,7 @@ export default {
   methods: {
     updateQuestionAnswer(objectValue) {
       const newValue = {...this.question_answer, [this.object_key]: objectValue}
-      this.$emit('input', newValue)
+      this.$emit('change', newValue)
     }
   }
 
